@@ -166,22 +166,16 @@ CREATE TABLE actors (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   first_name TEXT,
   last_name TEXT, 
-  casts_id TEXT,
-  movies_id TEXT
+  characters_id TEXT,
+  movie_id TEXT
   
 );
 
 CREATE TABLE characters (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  character_name TEXT
-);
+  character_name TEXT);
 
-CREATE TABLE casts (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  movie_id TEXT,
-  actor_id TEXT,
-  character_id TEXT
-);
+
 
 INSERT INTO studios (
   name)
@@ -226,10 +220,15 @@ VALUES (
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id
+  movie_id)
 VALUES(
 "Christian",
-"Bale");
+"Bale",
+"1",
+
+);
 
 INSERT INTO actors (
  first_name,
@@ -286,3 +285,74 @@ INSERT INTO actors (
 VALUES(
 "Liam",
 "Neeson");
+
+
+INSERT INTO characters (
+  character_name
+  )
+  VALUES (
+  "Bruce Wayne");
+
+  INSERT INTO characters (
+   character_name
+  )
+  VALUES (
+  "Alfred"  
+  );
+
+   INSERT INTO characters (
+  character_name
+  )
+  VALUES (
+  "Ra's Al Ghul"  
+  );
+
+   INSERT INTO characters (
+   character_name
+  )
+  VALUES (
+  "Joker"  
+  );
+
+  INSERT INTO characters (
+  character_name
+  )
+  VALUES (
+  "Harvey Dent"  
+  );
+
+  INSERT INTO characters (
+   character_name
+  )
+  VALUES (
+  "Rachel Dawes"  
+  );
+
+    INSERT INTO characters (
+  character_name
+  )
+  VALUES (
+  "Commissioner Gordon" 
+  );
+
+
+      INSERT INTO characters (
+   character_name
+  )
+  VALUES (
+  "Bane"  
+  );
+
+      INSERT INTO characters (
+   character_name
+  )
+  VALUES (
+  "John Blake"  
+  );
+
+     INSERT INTO characters (
+   character_name
+  )
+  VALUES (
+  "Selina Kyle"  
+  );
