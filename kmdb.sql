@@ -145,6 +145,7 @@
 DROP TABLE IF EXISTS studios;
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
+DROP TABLE IF EXISTS characters;
 DROP TABLE IF EXISTS casts;
 
 
@@ -159,26 +160,28 @@ CREATE TABLE movies (
   title TEXT,
   year TEXT, 
   rating TEXT,
-  studio_id TEXT,
-  actor_id TEXT
-);
+  studio_id TEXT);
 
 CREATE TABLE actors (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   first_name TEXT,
   last_name TEXT, 
   casts_id TEXT,
-  movies_id TEXT,
-  actor_id TEXT
+  movies_id TEXT
+  
+);
+
+CREATE TABLE characters (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  character_name TEXT
 );
 
 CREATE TABLE casts (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
-  character_name TEXT,
-  first_name TEXT, 
-  last_name TEXT
+  movie_id TEXT,
+  actor_id TEXT,
+  character_id TEXT
 );
-
 
 INSERT INTO studios (
   name)
@@ -188,26 +191,98 @@ INSERT INTO studios (
 INSERT INTO movies (
   title,
   year, 
-  rating)
+  rating,
+  studio_id)
 VALUES (
 "Batman Begins",
 "2005",
-"PG-13");
+"PG-13",
+"1"
+);
 
 INSERT INTO movies (
   title,
   year, 
-  rating)
+  rating,
+  studio_id)
 VALUES (
 "The Dark Knight",
 "2008",
-"PG-13");
+"PG-13",
+"1"
+);
 
 INSERT INTO movies (
   title,
   year, 
-  rating)
+  rating,
+  studio_id)
 VALUES (
 "The Dark Knight Rises",
 "2012",
-"PG-13");
+"PG-13",
+"1"
+);
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Christian",
+"Bale");
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Tom",
+"Hardy");
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Joseph",
+"Gordon-Levitt");
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Gary",
+"Oldman");
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Michael",
+"Caine");
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Maggie",
+"Gllenhaal");
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Aaron",
+"Eckhart");
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Katie",
+"Holmes");
+
+INSERT INTO actors (
+ first_name,
+  last_name)
+VALUES(
+"Liam",
+"Neeson");
