@@ -138,6 +138,10 @@
 -- The SQL statement for the cast output
 -- TODO!
 
+.mode column
+.headers off
+
+
 DROP TABLE IF EXISTS studios;
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
@@ -174,3 +178,36 @@ CREATE TABLE casts (
   first_name TEXT, 
   last_name TEXT
 );
+
+
+INSERT INTO studios (
+  name)
+  VALUES (
+    "WARNER");
+
+INSERT INTO movies (
+  title,
+  year, 
+  rating)
+VALUES (
+"Batman Begins",
+"2005",
+"PG-13");
+
+INSERT INTO movies (
+  title,
+  year, 
+  rating)
+VALUES (
+"The Dark Knight",
+"2008",
+"PG-13");
+
+INSERT INTO movies (
+  title,
+  year, 
+  rating)
+VALUES (
+"The Dark Knight Rises",
+"2012",
+"PG-13");
