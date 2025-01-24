@@ -120,21 +120,6 @@
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
--- Prints a header for the movies output
-.print "Movies"
-.print "======"
-.print ""
-
--- The SQL statement for the movies output
--- TODO!
-
--- Prints a header for the cast output
-.print ""
-.print "Top Cast"
-.print "========"
-.print ""
-
-
 -- The SQL statement for the cast output
 -- TODO!
 
@@ -183,7 +168,7 @@ CREATE TABLE actors_movies (
 INSERT INTO studios (
   name)
   VALUES (
-    "WARNER");
+    "Warner Bros");
 
 INSERT INTO movies (
   title,
@@ -528,5 +513,24 @@ VALUES (
 );
 
 
-SELECT title, year, rating
-FROM movies;
+.print "Movies"
+.print "======"
+.print ""
+
+SELECT movies.title, movies.year, movies.rating, studios.name
+FROM movies
+INNER JOIN studios ON studios.id = movies.studio_id;
+
+.print ""
+.print "Top Cast"
+.print "========"
+.print ""
+
+
+SELECT movies.title, actors.first_name, actors.last_name, characters.character_name
+FROM actors_movies
+INNER JOIN actors ON actors.id = actors_movies.actor_id
+INNER JOIN movies ON movies.id = actors_movies.movie_id
+INNER JOIN characters on characters.id = actors.characters_id
+ORDER BY movies.title, actors.first_name;
+
