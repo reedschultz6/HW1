@@ -526,3 +526,7 @@ VALUES (
   "10",
   "3"
 );
+
+
+SELECT title, year, rating
+FROM movies;
