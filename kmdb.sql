@@ -391,4 +391,138 @@ INSERT INTO characters (
   "Selina Kyle"  
   );
 
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "1",
+  "1"
+);
 
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "1",
+  "2"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "1",
+  "3"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "2",
+  "2"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "3",
+  "3"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "4",
+  "1"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "4",
+  "2"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "4",
+  "3"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "5",
+  "1"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "5",
+  "2"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "5",
+  "3"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "6",
+  "2"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "7",
+  "3"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "8",
+  "1"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "9",
+  "1"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "9",
+  "1"
+);
+
+INSERT INTO actors_movies (
+  actor_id, 
+  movie_id)
+VALUES (
+  "10",
+  "3"
+);
