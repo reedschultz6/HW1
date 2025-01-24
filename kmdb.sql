@@ -146,6 +146,7 @@ DROP TABLE IF EXISTS studios;
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
 DROP TABLE IF EXISTS characters;
+DROP TABLE IF EXISTS actors_movies;
 
 
 
@@ -166,14 +167,17 @@ CREATE TABLE actors (
   first_name TEXT,
   last_name TEXT, 
   characters_id TEXT,
-  movie_id TEXT
-  
-);
+  movie_id TEXT);
 
 CREATE TABLE characters (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   character_name TEXT);
 
+CREATE TABLE actors_movies (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  actor_id TEXT,
+  movie_id TEXT
+);
 
 
 INSERT INTO studios (
@@ -220,70 +224,101 @@ VALUES (
 INSERT INTO actors (
  first_name,
   last_name,
-  characters_id
-  movie_id)
+  characters_id)
 VALUES(
 "Christian",
 "Bale",
-"1",
-
-);
+"1");
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id)
 VALUES(
 "Tom",
-"Hardy");
+"Hardy",
+"8");
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id)
 VALUES(
 "Joseph",
-"Gordon-Levitt");
+"Gordon-Levitt",
+"9");
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id)
 VALUES(
 "Gary",
-"Oldman");
+"Oldman",
+"7");
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id)
 VALUES(
 "Michael",
-"Caine");
+"Caine",
+"2");
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id)
 VALUES(
 "Maggie",
-"Gllenhaal");
+"Gyllenhaal",
+"6");
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id)
 VALUES(
 "Aaron",
-"Eckhart");
+"Eckhart",
+"5");
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id)
 VALUES(
 "Katie",
-"Holmes");
+"Holmes",
+"6");
 
 INSERT INTO actors (
  first_name,
-  last_name)
+  last_name,
+  characters_id)
 VALUES(
 "Liam",
-"Neeson");
+"Neeson",
+"3");
+
+INSERT INTO actors (
+ first_name,
+  last_name,
+  characters_id)
+VALUES(
+"Heath",
+"Ledger",
+"4");
+
+INSERT INTO actors (
+ first_name,
+  last_name,
+  characters_id)
+VALUES(
+"Anne",
+"Hathaway",
+"4");
 
 
 INSERT INTO characters (
@@ -355,3 +390,5 @@ INSERT INTO characters (
   VALUES (
   "Selina Kyle"  
   );
+
+
