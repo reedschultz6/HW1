@@ -303,7 +303,7 @@ INSERT INTO actors (
 VALUES(
 "Anne",
 "Hathaway",
-"4");
+"10");
 
 
 INSERT INTO characters (
@@ -500,15 +500,15 @@ INSERT INTO actors_movies (
   actor_id, 
   movie_id)
 VALUES (
-  "9",
-  "1"
+  "10",
+  "2"
 );
 
 INSERT INTO actors_movies (
   actor_id, 
   movie_id)
 VALUES (
-  "10",
+  "11",
   "3"
 );
 
@@ -534,3 +534,27 @@ INNER JOIN movies ON movies.id = actors_movies.movie_id
 INNER JOIN characters on characters.id = actors.characters_id
 ORDER BY movies.title, actors.first_name;
 
+.print ""
+.print "Movies by Individual Actor"
+.print "========"
+.print ""
+
+SELECT movies.title, actors.first_name, actors.last_name, characters.character_name
+FROM actors_movies
+INNER JOIN actors ON actors.id = actors_movies.actor_id
+INNER JOIN movies ON movies.id = actors_movies.movie_id
+INNER JOIN characters on characters.id = actors.characters_id
+WHERE actor_id ="11";
+
+
+.print ""
+.print "Movies by Actor"
+.print "========"
+.print ""
+
+SELECT movies.title, actors.first_name, actors.last_name, characters.character_name
+FROM actors_movies
+INNER JOIN actors ON actors.id = actors_movies.actor_id
+INNER JOIN movies ON movies.id = actors_movies.movie_id
+INNER JOIN characters on characters.id = actors.characters_id
+WHERE movies.id ="2";
